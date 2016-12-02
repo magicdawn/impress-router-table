@@ -1,0 +1,41 @@
+{
+  "name": "impress-router-table",
+  "version": "0.0.1",
+  "description": "Sails.js like routing for koa.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "test-cover": "nyc --reporter=html --reporter=text mocha",
+    "report-cover": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/magicdawn/impress-router-table.git"
+  },
+  "keywords": [
+    "koa",
+    "router",
+    "routing",
+    "koa-router",
+    "impress-router",
+    "sails",
+    "policy"
+  ],
+  "author": "magicdawn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magicdawn/impress-router-table/issues"
+  },
+  "homepage": "https://github.com/magicdawn/impress-router-table#readme",
+  "devDependencies": {
+    "babel-eslint": "^7.1.0",
+    "babel-plugin-transform-async-to-generator": "^6.16.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "codecov": "^1.0.1",
+    "eslint": "^3.10.0",
+    "mocha": "^3.1.2",
+    "nyc": "^8.4.0",
+    "should": "^11.1.1"
+  }
+}
