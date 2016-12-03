@@ -37,12 +37,11 @@
     "supertest": "^2.0.1"
   },
   "dependencies": {
-    "co": "^4.6.0",
     "debug": "^2.3.3",
     "fs-extra": "^1.0.0",
     "impress-router": "^1.2.1",
     "lodash": "^4.17.2",
-    "promise.ify": "^0.3.0"
+    "methods": "^1.1.2"
   },
   "files": [
     "lib",
