@@ -1,6 +1,6 @@
 'use strict'
 
-const app = require('../demo/app')
+const app = require('./demo/app')
 const request = require('supertest')
 
 describe('It works', function() {

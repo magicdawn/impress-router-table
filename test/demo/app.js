@@ -1,6 +1,6 @@
 'use strict'
 
-const routing = require('../')
+const routing = require('../../')
 
 const app = module.exports = new(require('koa'))
 
