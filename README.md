@@ -14,7 +14,38 @@ $ npm i impress-router-table --save
 
 ## API
 ```js
-const impressRouterTable = require('impress-router-table');
+const routing = require('impress-router-table');
+```
+
+### `routing(rootdir)`
+returns a koa middleware
+
+```js
+
+const app = new (require('koa'))
+
+app.use(routing(__dirname + '/api'))
+
+app.listen(9000)
+```
+
+#### Folder structure in `rootdir`
+
+for example in previous example, `__dirname + '/api'`,
+take a look at [test/demo/api/](test/demo/api/)
+
+```
+test/demo/api
+├── controllers
+│   ├── PolicyTestController.js
+│   └── RouteTestController.js
+├── policies
+│   ├── auth.js
+│   └── bar.js
+├── policy.js
+└── routes.js
+
+2 directories, 6 files
 ```
 
 ## Changelog
