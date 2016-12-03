@@ -12,11 +12,11 @@ const compose = require('koa-compose')
 module.exports = function routing(home) {
   const router = new Router()
 
-  let controllers = fs.readdirSync(home + '/api/controllers')
+  let controllers = fs.readdirSync(home + '/controllers')
   controllers = controllers.filter(name => {
     if (!/Controller.js$/.test(name)) return false
 
-    const s = fs.statSync(`${ home }/api/controllers/${ name }`)
+    const s = fs.statSync(`${ home }/controllers/${ name }`)
     if (s.isDirectory()) return false
 
     return true
@@ -25,11 +25,11 @@ module.exports = function routing(home) {
 
   const registry = {}
   for (let name of controllers) {
-    registry[name] = require(`${ home }/api/controllers/${ name }`)
+    registry[name] = require(`${ home }/controllers/${ name }`)
   }
   console.log(registry)
 
-  const def = require(home + '/api/routes')
+  const def = require(home + '/routes')
   for (let name in def) {
     const arr = name.split(/ +/)
     const path = arr.pop()
