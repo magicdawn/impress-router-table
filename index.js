@@ -32,17 +32,19 @@ module.exports = function routing(home) {
   const policyRegistry = {}
   let list
 
-  list = fs.readdirSync(home + '/controllers')
-  list = list.filter(name => {
-    if (!/Controller.js$/.test(name)) return false
-    const s = fs.statSync(`${ home }/controllers/${ name }`)
-    if (s.isDirectory()) return false
-    if (_.startsWith(s, '_')) return false
-    return true
-  })
-  list = list.map(name => path.basename(name, path.extname(name)))
-  for (let name of list) {
-    controllerRegistry[name] = require(`${ home }/controllers/${ name }`)
+  if (fs.existsSync(home + '/controllers')) {
+    list = fs.readdirSync(home + '/controllers')
+    list = list.filter(name => {
+      if (!/Controller.js$/.test(name)) return false
+      const s = fs.statSync(`${ home }/controllers/${ name }`)
+      if (s.isDirectory()) return false
+      if (_.startsWith(s, '_')) return false
+      return true
+    })
+    list = list.map(name => path.basename(name, path.extname(name)))
+    for (let name of list) {
+      controllerRegistry[name] = require(`${ home }/controllers/${ name }`)
+    }
   }
 
   if (policy && fs.existsSync(`${ home }/policies`)) {
@@ -74,7 +76,7 @@ module.exports = function routing(home) {
       throw new Error('path must startsWith `/`')
     }
     if (!(method === 'all' || ~METHODS.indexOf(method))) {
-      throw new Error(`method not supported`)
+      throw new Error(`method ${ method } not supported`)
     }
 
     let val = routes[name]
