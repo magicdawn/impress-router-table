@@ -42,8 +42,8 @@ test/demo/api
 ├── policies
 │   ├── auth.js
 │   └── bar.js
-├── policy.js
-└── routes.js
+├── policy.js # policy config
+└── routes.js # routes config
 
 2 directories, 6 files
 ```
