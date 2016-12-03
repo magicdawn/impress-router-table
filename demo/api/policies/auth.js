@@ -2,7 +2,7 @@
 
 module.exports = (ctx, next) => {
   if (!ctx.req.user) {
-    ctx.body = 'not authed'
+    ctx.body = 'auth'
     return
   }
 

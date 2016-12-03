@@ -1,7 +1,8 @@
 'use strict'
 
 module.exports = {
-  TestController: {
-    '*': 'auth'
+  PolicyTestController: {
+    '*': 'auth',
+    foo: 'bar',
   }
 }
