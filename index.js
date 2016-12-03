@@ -6,7 +6,6 @@ const path = require('path')
 const Router = require('impress-router')
 const _ = require('lodash')
 const METHODS = require('methods')
-const compose = require('koa-compose')
 const debug = require('debug')('impress:table:index')
 const LocalUtil = require('./lib/util.js')
 
@@ -116,12 +115,10 @@ module.exports = function routing(home) {
       console.warn(`can't bind route ${ path } to unknown action ${ controller }.${ action }`)
       return
     }
-    if (Array.isArray(handler)) handler = compose(handler)
 
     const policyName = LocalUtil.getPolicyName(policy, controller, action)
     let currentPolicy
     if (policyName) currentPolicy = policyRegistry[policyName]
-    if (currentPolicy && Array.isArray(currentPolicy)) currentPolicy = compose(currentPolicy)
 
     if (currentPolicy) {
       router[method](path, currentPolicy, handler)
