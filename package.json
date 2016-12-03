@@ -43,5 +43,9 @@
     "impress-router": "^1.2.1",
     "lodash": "^4.17.2",
     "promise.ify": "^0.3.0"
-  }
+  },
+  "files": [
+    "lib",
+    "index.js"
+  ]
 }
