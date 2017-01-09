@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v0.0.3 2017-01-09
+- upgrade deps, impress-router@1.3.0
+
 ## v0.0.2 2016-12-04
 - fix deps & rm unused deps
 
