@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.1.0 2017-02-26
+
+- upgrade impress-router@1.4.1
+
 ## v0.0.4 2017-01-27
 
 - upgrade impress-router@1.4.0
