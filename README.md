@@ -17,7 +17,7 @@ $ npm i impress-router-table --save
 const routing = require('impress-router-table');
 ```
 
-### `routing(rootdir)`
+### `routing(rootdir, router)`
 returns a koa middleware
 
 ```js
@@ -28,6 +28,11 @@ app.use(routing(__dirname + '/api'))
 
 app.listen(9000)
 ```
+
+#### `router`
+
+router must support `get` / `post` / etc HTTP methods
+defaults to an new impress-router instance
 
 #### Folder structure in `rootdir`
 

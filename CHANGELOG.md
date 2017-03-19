@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.1.1 2017-03-19
+
+- make `router` as parameter, and defaults to `new impressRouter`
+
 ## v0.1.0 2017-02-26
 
 - upgrade impress-router@1.4.1
