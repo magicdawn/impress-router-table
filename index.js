@@ -9,8 +9,8 @@ const METHODS = require('methods')
 const debug = require('debug')('impress:table:index')
 const LocalUtil = require('./lib/util.js')
 
-module.exports = function routing(home) {
-  const router = new Router()
+module.exports = function routing(home, router) {
+  router = router || new Router()
 
   /**
    * config
