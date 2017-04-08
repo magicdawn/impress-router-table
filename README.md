@@ -1,4 +1,6 @@
 # impress-router-table
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/magicdawn/impress-router-table.svg)](https://greenkeeper.io/)
 > Sails.js like routing for koa.js
 
 [![Build Status](https://img.shields.io/travis/magicdawn/impress-router-table.svg?style=flat-square)](https://travis-ci.org/magicdawn/impress-router-table)
