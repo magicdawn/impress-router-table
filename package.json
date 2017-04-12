@@ -28,18 +28,18 @@
   },
   "homepage": "https://github.com/magicdawn/impress-router-table#readme",
   "devDependencies": {
-    "codecov": "^1.0.1",
-    "eslint": "^3.13.0",
+    "codecov": "^2.1.0",
+    "eslint": "^3.19.0",
     "istanbul": "^1.1.0-alpha.1",
-    "koa": "^2.0.0-alpha.7",
+    "koa": "^2.2.0",
     "mocha": "^3.1.2",
-    "should": "^11.1.2",
-    "supertest": "^2.0.1"
+    "should": "^11.2.1",
+    "supertest": "^3.0.0"
   },
   "dependencies": {
-    "debug": "^2.6.0",
-    "fs-extra": "^1.0.0",
-    "impress-router": "^1.4.1",
+    "debug": "^2.6.3",
+    "fs-extra": "^2.1.2",
+    "impress-router": "^1.5.0",
     "lodash": "^4.17.4",
     "methods": "^1.1.2"
   },
