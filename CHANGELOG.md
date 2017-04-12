@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.5.0 2017-04-12
+
+- use `impress-router@1.5.0`, and align version to 1.5.0
+
 ## v0.1.1 2017-03-19
 
 - make `router` as parameter, and defaults to `new impressRouter`
